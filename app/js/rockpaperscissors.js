@@ -84,8 +84,8 @@ function playToFive() {
     console.log("Let's play Rock, Paper, Scissors");
     var playerWins = 0;
     var computerWins = 0;
-    var games;
-    for ( games = 0; games <= 11; games++ ) {
+    var games = 0;
+    while ( playerWins < 5 && computerWins < 5 && games < 20 ) {
 	var winner = getWinner();
 	if ( winner === "You." ) {
 	console.log("You beat the computer.");
@@ -98,6 +98,7 @@ function playToFive() {
 	} else {
 	    console.log("Tie game.");
 	}
+	games += 1;
 	 console.log("The score is currently " + playerWins + " to " + computerWins);
    }
 }
